@@ -13,6 +13,10 @@ public class TravelMantics {
         this.dealImageUrl = dealImageUrl;
     }
 
+    public TravelMantics(){
+
+    }
+
     public String getDealTitle() {
         return dealTitle;
     }

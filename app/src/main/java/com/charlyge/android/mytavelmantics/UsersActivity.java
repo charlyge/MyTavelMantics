@@ -94,19 +94,19 @@ public class UsersActivity extends AppCompatActivity {
 
     private void loadDeals() {
         firebaseFirestore.collection("travelMantics").addSnapshotListener((queryDocumentSnapshots, e) -> {
-            if (e == null) {
+            if (e != null) {
                 return;
             }
             if (queryDocumentSnapshots != null) {
                 List<TravelMantics> travelMantics = queryDocumentSnapshots.toObjects(TravelMantics.class);
                 adapter.setTravelManticsList(travelMantics);
-                for (DocumentChange change: queryDocumentSnapshots.getDocumentChanges()) {
-                     switch (change.getType()){
-                         case ADDED: onDocumentAdded(change);break;
-                         case REMOVED:onDocumentRemoved(change);break;
-                         case MODIFIED: onDocumentModified(change);
-                     }
-                }
+//                for (DocumentChange change: queryDocumentSnapshots.getDocumentChanges()) {
+//                     switch (change.getType()){
+//                         case ADDED: onDocumentAdded(change);break;
+//                         case REMOVED:onDocumentRemoved(change);break;
+//                         case MODIFIED: onDocumentModified(change);
+//                     }
+//                }
             }
         });
 

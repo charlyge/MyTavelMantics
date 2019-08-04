@@ -30,7 +30,7 @@ public class TravelManticsAdapter extends RecyclerView.Adapter<TravelManticsAdap
              travelViewHolder.tvdealTitle.setText(travelMantics.getDealTitle());
              travelViewHolder.tvprice.setText(travelMantics.getPrice());
              travelViewHolder.tvdealBody.setText(travelMantics.getDealBody());
-        Picasso.get().load(travelMantics.getDealImageUrl()).placeholder(R.drawable.ic_loading).centerInside().into(travelViewHolder.dealImageView);
+        Picasso.get().load(travelMantics.getDealImageUrl()).placeholder(R.drawable.ic_loading).into(travelViewHolder.dealImageView);
 
 
     }

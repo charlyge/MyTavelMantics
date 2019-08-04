@@ -53,6 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:textStyle="bold"
+        android:textColor="#ffff"
+        android:padding="5dp"
+        android:background="@color/colorPrimary"
         android:text="Upload Image"
         />
 
@@ -61,6 +64,7 @@
     <ImageView
         android:id="@+id/upload_image_view"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         tools:src="@mipmap/ic_launcher"

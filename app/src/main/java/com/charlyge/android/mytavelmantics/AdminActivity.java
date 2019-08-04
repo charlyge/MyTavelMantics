@@ -115,6 +115,7 @@ public class AdminActivity extends AppCompatActivity {
         db.collection("travelMantics").document().set(travelMantics).addOnSuccessListener(aVoid ->
                 Toast.makeText(AdminActivity.this, "Upload Successful", Toast.LENGTH_SHORT).show());
         progressDialog.dismiss();
+        finish();
     }
 
     private void uploadImage() {
