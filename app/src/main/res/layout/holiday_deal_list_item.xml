@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/deal_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@mipmap/ic_launcher"
+        />
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="0dp"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    >
+    <TextView
+        android:id="@+id/li_dealTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         tools:text="Delas"
+        />
+    <TextView
+        android:id="@+id/li_dealBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Delas"
+        />
+
+    <TextView
+        android:id="@+id/li_dealprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Delas"
+        />
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1049999316607",
+    "firebase_url": "https://travemantics-803d3.firebaseio.com",
+    "project_id": "travemantics-803d3",
+    "storage_bucket": "travemantics-803d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049999316607:android:e6dec8ce60bdbd54",
+        "android_client_info": {
+          "package_name": "com.charlyge.android.mytavelmantics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049999316607-1e6mq3psonq5t4nd6hm7ujtkbj54pff6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.charlyge.android.mytavelmantics",
+            "certificate_hash": "4183bd49c598e103a0dff08fbe873fee2ef8dd35"
+          }
+        },
+        {
+          "client_id": "1049999316607-pa1mh5irf2mefeo22nujd38ic0onsrvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.charlyge.android.mytavelmantics",
+            "certificate_hash": "0df1ba1597fa9c6663598c586bd81e8015f1605f"
+          }
+        },
+        {
+          "client_id": "1049999316607-llqadkjdm1pgu196tl10kahr9uqorrhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0FOMTRFjdSYWxL7JRuxeSmut_pEyG22s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049999316607-llqadkjdm1pgu196tl10kahr9uqorrhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
