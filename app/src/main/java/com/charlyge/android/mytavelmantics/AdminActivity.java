@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -155,6 +156,9 @@ public class AdminActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_save) {
+            if (!validteInput()){
+                return false;
+            }
             uploadImageToFirebase();
             return true;
         }
@@ -184,5 +188,16 @@ public class AdminActivity extends AppCompatActivity {
             Toast.makeText(this, "Accept Permission to upload file", Toast.LENGTH_SHORT).show();
             checkPermissionAndUpload(this);
         }
+    }
+
+    private boolean validteInput(){
+        String dealTitle = Objects.requireNonNull(editx_dealTitle.getText()).toString();
+        String dealBody = Objects.requireNonNull(editx_dealBody.getText()).toString();
+        String dealPrice = Objects.requireNonNull(editx_dealPrice.getText()).toString();
+        if(TextUtils.isEmpty(dealBody) || TextUtils.isEmpty(dealTitle)|| TextUtils.isEmpty(dealPrice)){
+            Toast.makeText(this, "Input All Fields", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }

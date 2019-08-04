@@ -1,7 +1,6 @@
 package com.charlyge.android.mytavelmantics;
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -18,15 +17,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 public class UsersActivity extends AppCompatActivity {
     private RecyclerView recy_view;
@@ -35,7 +30,7 @@ public class UsersActivity extends AppCompatActivity {
     private int RC_SIGN_IN = 898;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
-    private List<DocumentSnapshot> mSnapshots;
+    private List<DocumentSnapshot> mSnapshots = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,13 +95,16 @@ public class UsersActivity extends AppCompatActivity {
             if (queryDocumentSnapshots != null) {
                 List<TravelMantics> travelMantics = queryDocumentSnapshots.toObjects(TravelMantics.class);
                 adapter.setTravelManticsList(travelMantics);
-//                for (DocumentChange change: queryDocumentSnapshots.getDocumentChanges()) {
-//                     switch (change.getType()){
-//                         case ADDED: onDocumentAdded(change);break;
-//                         case REMOVED:onDocumentRemoved(change);break;
-//                         case MODIFIED: onDocumentModified(change);
-//                     }
-//                }
+                for (DocumentChange change: queryDocumentSnapshots.getDocumentChanges()) {
+                    if(change==null){
+                        return;
+                    }
+                     switch (change.getType()){
+                         case ADDED: onDocumentAdded(change);break;
+                         case REMOVED:onDocumentRemoved(change);break;
+                         case MODIFIED: onDocumentModified(change);
+                     }
+                }
             }
         });
 
